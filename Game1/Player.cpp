@@ -66,8 +66,12 @@ void Player::Render()
 	walk->Render();
 	roll->Render();
 
-	DWRITE->RenderText(L"¾È³ç\n¾È³ç", RECT{ (long)(col->GetWorldPivot().x) , -1 * (long)(col->GetWorldPivot().y) ,
-	(long)(col->GetWorldPivot().x + 50) ,-1 * (long)(col->GetWorldPivot().y - 50) }, 20.0f,
+	DWRITE->RenderText(L"ÇÃ·¹ÀÌ¾î", RECT{ 
+		(long)col->GetWorldPos().x + (long)app.GetHalfWidth() - (long)(70.0f),
+		-(long)col->GetWorldPos().y + (long)app.GetHalfHeight() - (long)(100),
+		(long)app.GetWidth(), (long)app.GetHeight()
+		}, 
+		20.0f,
 		L"±Ã¼­", Color(1.0f, 0.0f, 0.0f, 1.0f), DWRITE_FONT_WEIGHT_BOLD,
 		DWRITE_FONT_STYLE_ITALIC);
 }

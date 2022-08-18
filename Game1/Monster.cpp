@@ -85,6 +85,18 @@ void Monster::Render()
 	range[0]->Render();
 	range[1]->Render();
 	range[2]->Render();
+
+
+	//폰트
+	DWRITE->RenderText(L"보스", RECT
+		{
+		(long)col->GetWorldPos().x + (long)app.GetHalfWidth() - (long)(35.0f),
+		-(long)col->GetWorldPos().y + (long)app.GetHalfHeight() - (long)(100),
+		(long)app.GetWidth(), (long)app.GetHeight()
+		},
+		30.0f,
+		L"kodia", Color(1.0f, 0.0f, 0.0f, 1.0f), DWRITE_FONT_WEIGHT_BOLD,
+		DWRITE_FONT_STYLE_ITALIC);
 }
 
 void Monster::Idle()

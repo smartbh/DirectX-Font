@@ -29,5 +29,9 @@ public:
 	void Look();
 	void Move();
 	void Attack();
+	MonsterState	getMonsterState()
+	{
+		return monsterState;
+	}
 };
 

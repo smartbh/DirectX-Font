@@ -5,7 +5,8 @@ class Scene01 : public Scene
 private:
 	Player* pl;
 	Monster* mon;
-
+	float	hitTime = 0.0f;
+	Vector2 hitPos;
 public:
 	virtual void Init() override;
 	virtual void Release() override; //«ÿ¡¶
