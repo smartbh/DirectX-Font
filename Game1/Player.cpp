@@ -55,6 +55,9 @@ void Player::Update()
 	col->Update();
 	walk->Update();
 	roll->Update();
+
+	cout << col->GetWorldPos().x << endl;
+	cout << col->GetWorldPos().y << endl;
 }
 
 void Player::Render()
@@ -62,6 +65,11 @@ void Player::Render()
 	col->Render();
 	walk->Render();
 	roll->Render();
+
+	DWRITE->RenderText(L"¾È³ç\n¾È³ç", RECT{ (long)(col->GetWorldPivot().x) , -1 * (long)(col->GetWorldPivot().y) ,
+	(long)(col->GetWorldPivot().x + 50) ,-1 * (long)(col->GetWorldPivot().y - 50) }, 20.0f,
+		L"±Ã¼­", Color(1.0f, 0.0f, 0.0f, 1.0f), DWRITE_FONT_WEIGHT_BOLD,
+		DWRITE_FONT_STYLE_ITALIC);
 }
 
 void Player::Idle()

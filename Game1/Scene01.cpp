@@ -29,9 +29,7 @@ void Scene01::Render()
 
 	//								L    T    R    B
 	//DWRITE->RenderText(L"hi", RECT{100, 100, 100, 100}, 300.0f);
-	DWRITE->RenderText(L"¾È³ç\n¾È³ç", RECT{ 100, 100, 100,100 }, 20.0f,
-		L"±Ã¼­", Color(1.0f, 0.0f, 0.0f, 1.0f), DWRITE_FONT_WEIGHT_BOLD,
-		DWRITE_FONT_STYLE_ITALIC);
+
 }
 
 void Scene01::ResizeScreen()
